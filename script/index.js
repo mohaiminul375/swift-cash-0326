@@ -4,6 +4,17 @@ const getCategory = () => {
     .then((res) => res.json())
     .then((data) => displayCategory(data));
 };
+const manageSpinner = (status) => {
+  if (status) {
+    document.getElementById('spinner').classList.remove('hidden')
+    document.getElementById('spinner').classList.add('flex')
+    document.getElementById('card-container').classList.add('hidden')
+  }
+  else {
+    document.getElementById('spinner').classList.add('hidden')
+    document.getElementById('card-container').classList.remove('hidden')
+  }
+}
 // display categories
 const displayCategory = (categories) => {
   const categoryContainer = document.getElementById("category-container");
@@ -19,18 +30,21 @@ const displayCategory = (categories) => {
 };
 // get all product data by API
 const getProductsAll = () => {
+  manageSpinner(true)
   fetch("https://fakestoreapi.com/products")
     .then((res) => res.json())
     .then((data) => showCard(data));
 };
 // get product (by category) data by API
 const getProductsCategory = (category) => {
+  manageSpinner(true)
   fetch(`https://fakestoreapi.com/products/category/${category}`)
     .then((res) => res.json())
     .then((data) => showCard(data));
 };
 // default load all product
 document.addEventListener("DOMContentLoaded", () => {
+  manageSpinner(true)
   getProductsAll();
 });
 // show Product card
@@ -66,6 +80,7 @@ const showCard = (products) => {
         `;
     productContainer.append(card);
   }
+  manageSpinner(false)
 };
 // get single product data by API
 const getSingleProduct = (id) => {
