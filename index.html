@@ -1,250 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swift Cart | Best e-commerce in your town</title>
-    <!-- style css -->
-    <link rel="stylesheet" href="styles/style.css">
-    <!-- tailwind css -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Swift Cart | Best e-commerce in your town</title>
+        <!-- style css -->
+        <link rel="stylesheet" href="styles/style.css">
+        <!-- tailwind css -->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet"
+            type="text/css" />
+        <script
+            src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <!-- font awesome -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
 
-<body>
-    <!-- header -->
-    <header class="bg-base-100 shadow-sm">
-        <div class="navbar container mx-auto px-2 lg:px-0">
-            <div class="navbar-start">
-                <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h8m-8 6h16" />
-                        </svg>
+    <body>
+        <!-- header -->
+        <header class="bg-base-100 shadow-sm">
+            <div class="navbar container mx-auto px-2 lg:px-0">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button"
+                            class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="-1"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                            <li
+                                class="hover:text-sky-500 font-semibold text-base"><a
+                                    href="/">Home</a></li>
+                            <li
+                                class="hover:text-sky-500 font-semibold text-base"><a
+                                    href="/products.html">Products</a></li>
+                            <li
+                                class="hover:text-sky-500 font-semibold text-base"><a
+                                    href="#">about</a></li>
+                            <li
+                                class="hover:text-sky-500 font-semibold text-base"><a
+                                    href="#">Contact</a></li>
+                        </ul>
                     </div>
-                    <ul tabindex="-1"
-                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <a>Parent</a>
-                            <ul class="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
+                    <!-- logo -->
+                    <h2 class="font-bold text-2xl text-blue-700">SwiftCash</h2>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 gap-4">
+                        <li
+                            class="hover:text-sky-500 font-semibold text-base"><a
+                                href="/">Home</a></li>
+                        <li
+                            class="hover:text-sky-500 font-semibold text-base"><a
+                                href="/products.html">Products</a></li>
+                        <li
+                            class="hover:text-sky-500 font-semibold text-base"><a
+                                href="#">about</a></li>
+                        <li
+                            class="hover:text-sky-500 font-semibold text-base"><a
+                                href="#">Contact</a></li>
                     </ul>
                 </div>
-                <!-- logo -->
-                <h2 class="font-bold text-2xl text-blue-700">SwiftCash</h2>
-            </div>
-            <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal px-1 gap-4">
-                    <li class="hover:text-sky-500 font-semibold text-base"><a href="/">Home</a></li>
-                    <li class="hover:text-sky-500 font-semibold text-base"><a href="/products.html">Products</a></li>
-                    <li class="hover:text-sky-500 font-semibold text-base"><a href="#">about</a></li>
-                    <li class="hover:text-sky-500 font-semibold text-base"><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="navbar-end">
-                <h4><i class="fa-solid fa-cart-shopping text-2xl"></i></h4>
-            </div>
-        </div>
-    </header>
-    <!-- main -->
-    <main class="space-y-28 bg-slate-100">
-        <!-- banner -->
-        <section>
-            <div class="banner flex flex-col justify-center items-left px-2 lg:px-0">
-                <div class="text-white container mx-auto space-y-4">
-                    <h2 class="text-5xl font-bold ">Best Collection For
-                        You</h2>
-                    <p class="text-gray-100">Discover at least trending in
-                        fashion, electronics,
-                        and many more. Shop with <br> confident and style at
-                        swiftCart</p>
-                    <button class="btn bg-[#3D45AA] text-white shadow-none border-none text-lg">Shop
-                        Now</button>
+                <div class="navbar-end">
+                    <h4><i class="fa-solid fa-cart-shopping text-2xl"></i></h4>
                 </div>
             </div>
-        </section>
-        <!-- why choose us -->
-        <section class="container mx-auto">
-            <div class="text-center">
-                <h2 class="text-4xl font-bold">Why Choose Us</h2>
-                <p class="text-gray-400 text-xl">We provide the best
-                    shopping experience with top notch service</p>
-            </div>
-            <!-- cards -->
-            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 gap-y-14">
-                <div class="bg-white shadow-md space-y-5 p-5 py-10 rounded-xl relative">
-                    <div class="p-3 bg-sky-100 inline rounded-lg absolute -top-8">
-                        <i class="fa-regular fa-truck text-[#3D45AA] text-3xl"></i>
-                    </div>
-                    <div class="space-y-4">
-                        <h5 class="text-xl font-semibold">Fast Delivery</h5>
-                        <p class="text-lg">Get your order delivery to your
-                            droop step
-                            quickly and effectively</p>
-                    </div>
-                </div>
-                <div class="bg-white shadow-md space-y-5 p-5 py-10 rounded-xl relative">
-                    <div class="p-3 bg-sky-100 inline rounded-lg absolute -top-8">
-                        <i class="fa-regular fa-headphones text-[#3D45AA] text-3xl"></i>
-                    </div>
-                    <div class="space-y-4">
-                        <h5 class="text-xl font-semibold">24/7</h5>
-                        <p class="text-lg">Our support team is available
-                            around the clock to assist you</p>
-                    </div>
-                </div>
-                <div class="bg-white shadow-md space-y-5 p-5 py-10 rounded-xl relative">
-                    <div class="p-3 bg-sky-100 inline rounded-lg absolute -top-8">
-                        <i class="fa-solid fa-shield text-[#3D45AA] text-3xl"></i>
-                    </div>
-                    <div class="space-y-4">
-                        <h5 class="text-xl font-semibold">Secure
-                            Payment</h5>
-                        <p class="text-lg">Experience safe and secure
-                            transaction with our encrypted payment
-                            system.</p>
-                    </div>
-                </div>
-                <div class="bg-white shadow-md space-y-5 p-5 py-10 rounded-xl relative">
-                    <div class="p-3 bg-sky-100 inline rounded-lg absolute -top-8">
-                        <i class="fa-solid fa-arrows-rotate text-[#3D45AA] text-3xl"></i>
-                    </div>
-                    <div class="space-y-4">
-                        <h5 class="text-xl font-semibold">Easy Returns</h5>
-                        <p class="text-lg">Not satisfied? Return your
-                            products easily within 30 days.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--  trending-->
-        <!-- <section></section> -->
-    </main>
-    <!-- footer -->
-    <footer class="bg-[#17202a] text-gray-300">
-        <div class="container mx-auto px-6 lg:px-8 pt-12 pb-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-                <div>
-                    <h2 class="text-2xl font-extrabold text-[#6f63ff]">SwiftCart</h2>
-                    <p class="mt-4 text-sm text-gray-400 leading-relaxed max-w-xs">
-                        Your one-stop shop for all fashion and lifestyle
-                        needs. Quality products, fast delivery, and
-                        excellent support.
-                    </p>
-                </div>
-
-                <div>
-                    <h6 class="text-sm font-semibold uppercase text-gray-400 mb-4">Quick
-                        Links</h6>
-                    <ul class="space-y-3">
-                        <li><a class="text-gray-300 hover:text-white transition" href="#">Home</a></li>
-                        <li><a class="text-gray-300 hover:text-white transition" href="#">Products</a></li>
-                        <li><a class="text-gray-300 hover:text-white transition" href="#">About</a></li>
-                        <li><a class="text-gray-300 hover:text-white transition" href="#">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h6 class="text-sm font-semibold uppercase text-gray-400 mb-4">Support</h6>
-                    <ul class="space-y-3">
-                        <li><a class="text-gray-300 hover:text-white transition" href="#">FAQ</a></li>
-                        <li><a class="text-gray-300 hover:text-white transition" href="#">Shipping</a></li>
-                        <li><a class="text-gray-300 hover:text-white transition" href="#">Returns</a></li>
-                        <li><a class="text-gray-300 hover:text-white transition" href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h6 class="text-sm font-semibold uppercase text-gray-400 mb-4">Subscribe
-                        to our newsletter</h6>
-                    <p class="text-sm text-gray-400 mb-4 max-w-sm">
-                        The latest news, articles, and resources, sent to
-                        your inbox weekly.
-                    </p>
-<!-- form -->
-                    <form class="flex gap-3" action="#" method="POST" onsubmit="event.preventDefault();">
-                        <label for="footer-email" class="sr-only">Email</label>
-                        <input id="footer-email" type="email" required
-                            class="flex-1 min-w-0 rounded-md border border-gray-700 bg-[#0f1720] px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#6f63ff] focus:border-transparent"
-                            placeholder="Enter your email" />
-
+        </header>
+        <!-- main -->
+        <main class="space-y-28 bg-slate-100">
+            <!-- banner -->
+            <section>
+                <div
+                    class="banner flex flex-col justify-center items-left px-2 lg:px-0">
+                    <div class="text-white container mx-auto space-y-4">
+                        <h2 class="text-5xl font-bold ">Best Collection For
+                            You</h2>
+                        <p class="text-gray-100">Discover at least trending in
+                            fashion, electronics,
+                            and many more. Shop with <br> confident and style at
+                            swiftCart</p>
                         <button
-                            class="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-white bg-[#5b46ff] hover:bg-[#4936e6] focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-[#5b46ff] transition">
-                            Subscribe
-                        </button>
-                    </form>
+                            class="btn bg-[#3D45AA] text-white shadow-none border-none text-lg">Shop
+                            Now</button>
+                    </div>
                 </div>
-            </div>
-            <!-- divider -->
-            <hr class="my-8 border-t border-gray-700/60">
-            <!-- bottom row -->
-            <div class="flex flex-col md:flex-row items-center md:justify-between gap-4">
-                <p class="text-sm text-gray-400">© 2026 SwiftCart, Inc. All
-                    rights reserved.</p>
+            </section>
+            <!-- why choose us -->
+            <section class="container mx-auto">
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold">Why Choose Us</h2>
+                    <p class="text-gray-400 text-xl">We provide the best
+                        shopping experience with top notch service</p>
+                </div>
+                <!-- cards -->
+                <div
+                    class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 gap-y-14">
+                    <div
+                        class="bg-white shadow-md space-y-5 p-5 py-10 rounded-xl relative">
+                        <div
+                            class="p-3 bg-sky-100 inline rounded-lg absolute -top-8">
+                            <i
+                                class="fa-regular fa-truck text-[#3D45AA] text-3xl"></i>
+                        </div>
+                        <div class="space-y-4">
+                            <h5 class="text-xl font-semibold">Fast Delivery</h5>
+                            <p class="text-lg">Get your order delivery to your
+                                droop step
+                                quickly and effectively</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white shadow-md space-y-5 p-5 py-10 rounded-xl relative">
+                        <div
+                            class="p-3 bg-sky-100 inline rounded-lg absolute -top-8">
+                            <i
+                                class="fa-regular fa-headphones text-[#3D45AA] text-3xl"></i>
+                        </div>
+                        <div class="space-y-4">
+                            <h5 class="text-xl font-semibold">24/7</h5>
+                            <p class="text-lg">Our support team is available
+                                around the clock to assist you</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white shadow-md space-y-5 p-5 py-10 rounded-xl relative">
+                        <div
+                            class="p-3 bg-sky-100 inline rounded-lg absolute -top-8">
+                            <i
+                                class="fa-solid fa-shield text-[#3D45AA] text-3xl"></i>
+                        </div>
+                        <div class="space-y-4">
+                            <h5 class="text-xl font-semibold">Secure
+                                Payment</h5>
+                            <p class="text-lg">Experience safe and secure
+                                transaction with our encrypted payment
+                                system.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white shadow-md space-y-5 p-5 py-10 rounded-xl relative">
+                        <div
+                            class="p-3 bg-sky-100 inline rounded-lg absolute -top-8">
+                            <i
+                                class="fa-solid fa-arrows-rotate text-[#3D45AA] text-3xl"></i>
+                        </div>
+                        <div class="space-y-4">
+                            <h5 class="text-xl font-semibold">Easy Returns</h5>
+                            <p class="text-lg">Not satisfied? Return your
+                                products easily within 30 days.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--  trending-->
+            <!-- You can open the modal using ID.showModal() method -->
+            <button class="btn" onclick="my_modal_3.showModal()">open
+                modal</button>
+            <dialog id="my_modal_3" class="modal">
+                <div class="modal-box">
+                    <form method="dialog">
+                        <button
+                            class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                    </form>
+                    <h3 class="text-lg font-bold">Hello!</h3>
+                    <p class="py-4">Press ESC key or click on ✕ button to
+                        close</p>
+                </div>
+            </dialog>
+            <!-- <section></section> -->
+        </main>
+        <!-- footer -->
+        <footer class="bg-[#17202a] text-gray-300">
+            <div class="container mx-auto px-6 lg:px-8 pt-12 pb-8">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                    <div>
+                        <h2
+                            class="text-2xl font-extrabold text-[#6f63ff]">SwiftCart</h2>
+                        <p
+                            class="mt-4 text-sm text-gray-400 leading-relaxed max-w-xs">
+                            Your one-stop shop for all fashion and lifestyle
+                            needs. Quality products, fast delivery, and
+                            excellent support.
+                        </p>
+                    </div>
 
-                <div class="flex items-center gap-6">
-                    <!-- social icons -->
-                    <div class="flex items-center gap-3">
-                        <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Facebook">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                    d="M18 2h-3a4 4 0 00-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 011-1h3z"></path>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Twitter">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                    d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012 7v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
-                                </path>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Instagram">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="1.5"></rect>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                    d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                    d="M17.5 6.5h.01"></path>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition" aria-label="LinkedIn">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-14h4v2"></path>
-                                <rect x="2" y="9" width="4" height="11" rx="1"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Email">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 8V6a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2z">
-                                </path>
-                            </svg>
-                        </a>
+                    <div>
+                        <h6
+                            class="text-sm font-semibold uppercase text-gray-400 mb-4">Quick
+                            Links</h6>
+                        <ul class="space-y-3">
+                            <li><a
+                                    class="text-gray-300 hover:text-white transition"
+                                    href="#">Home</a></li>
+                            <li><a
+                                    class="text-gray-300 hover:text-white transition"
+                                    href="#">Products</a></li>
+                            <li><a
+                                    class="text-gray-300 hover:text-white transition"
+                                    href="#">About</a></li>
+                            <li><a
+                                    class="text-gray-300 hover:text-white transition"
+                                    href="#">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h6
+                            class="text-sm font-semibold uppercase text-gray-400 mb-4">Support</h6>
+                        <ul class="space-y-3">
+                            <li><a
+                                    class="text-gray-300 hover:text-white transition"
+                                    href="#">FAQ</a></li>
+                            <li><a
+                                    class="text-gray-300 hover:text-white transition"
+                                    href="#">Shipping</a></li>
+                            <li><a
+                                    class="text-gray-300 hover:text-white transition"
+                                    href="#">Returns</a></li>
+                            <li><a
+                                    class="text-gray-300 hover:text-white transition"
+                                    href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h6
+                            class="text-sm font-semibold uppercase text-gray-400 mb-4">Subscribe
+                            to our newsletter</h6>
+                        <p class="text-sm text-gray-400 mb-4 max-w-sm">
+                            The latest news, articles, and resources, sent to
+                            your inbox weekly.
+                        </p>
+                        <!-- form -->
+                        <form class="flex gap-3" action="#" method="POST"
+                            onsubmit="event.preventDefault();">
+                            <label for="footer-email"
+                                class="sr-only">Email</label>
+                            <input id="footer-email" type="email" required
+                                class="flex-1 min-w-0 rounded-md border border-gray-700 bg-[#0f1720] px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#6f63ff] focus:border-transparent"
+                                placeholder="Enter your email" />
+
+                            <button
+                                class="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-white bg-[#5b46ff] hover:bg-[#4936e6] focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-[#5b46ff] transition">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <!-- divider -->
+                <hr class="my-8 border-t border-gray-700/60">
+                <!-- bottom row -->
+                <div
+                    class="flex flex-col md:flex-row items-center md:justify-between gap-4">
+                    <p class="text-sm text-gray-400">© 2026 SwiftCart, Inc. All
+                        rights reserved.</p>
+
+                    <div class="flex items-center gap-6">
+                        <!-- social icons -->
+                        <div class="flex items-center gap-3">
+                            <a href="#"
+                                class="text-gray-400 hover:text-white transition"
+                                aria-label="Facebook">
+                                <svg class="w-5 h-5" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                        d="M18 2h-3a4 4 0 00-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 011-1h3z"></path>
+                                </svg>
+                            </a>
+                            <a href="#"
+                                class="text-gray-400 hover:text-white transition"
+                                aria-label="Twitter">
+                                <svg class="w-5 h-5" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                        d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012 7v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#"
+                                class="text-gray-400 hover:text-white transition"
+                                aria-label="Instagram">
+                                <svg class="w-5 h-5" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2" y="2" width="20" height="20"
+                                        rx="5" ry="5" stroke-width="1.5"></rect>
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                        d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                        d="M17.5 6.5h.01"></path>
+                                </svg>
+                            </a>
+                            <a href="#"
+                                class="text-gray-400 hover:text-white transition"
+                                aria-label="LinkedIn">
+                                <svg class="w-5 h-5" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-14h4v2"></path>
+                                    <rect x="2" y="9" width="4" height="11"
+                                        rx="1"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                            <a href="#"
+                                class="text-gray-400 hover:text-white transition"
+                                aria-label="Email">
+                                <svg class="w-5 h-5" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 8V6a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <!-- javascript -->
-    <script src="script/index.js"></script>
-</body>
+        </footer>
+        <!-- javascript -->
+        <script src="script/index.js"></script>
+    </body>
 
 </html>
