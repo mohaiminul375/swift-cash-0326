@@ -50,11 +50,15 @@ const displayModal = (product) => {
                 <div class="">
                     <span class="font-bold text-lg">$${product.price}</span>
                 </div>
-                <div class="">
-                    <button class="rounded-lg btn bg-[#4841d6] text-white w-full"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
-                </div>
             </div>
         </div>
 `;
   document.getElementById("my_modal_3").showModal();
 };
+// cart length
+const cartLength = JSON.parse(localStorage.getItem('cart'))?.length ||0;
+const cartCollectionLength = () => {
+  document.querySelector('.nav-cart').innerText = cartLength;
+}
+cartCollectionLength()
+

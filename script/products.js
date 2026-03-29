@@ -51,7 +51,6 @@ const showCard = (products) => {
     const productContainer = document.getElementById("card-container");
     productContainer.innerHTML = "";
     for (let product of products) {
-        const cartObj = { product }
         const card = document.createElement("div");
         card.innerHTML = `
         <div class="card bg-base-100 shadow-xl p-4">
@@ -111,3 +110,4 @@ const addToCart = (product) => {
 // call func
 getProductsAll();
 getCategory();
+cartCollectionLength()

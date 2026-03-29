@@ -1,20 +1,20 @@
 // Javascript for home page
 // get all product data by API(slice4)
 const getProductsHome = () => {
-  manageSpinner(true)
-  fetch("https://fakestoreapi.com/products")
-    .then((res) => res.json())
-    .then((data) =>
-      showCardHome(data.slice(0,4))
-    );
+    manageSpinner(true)
+    fetch("https://fakestoreapi.com/products")
+        .then((res) => res.json())
+        .then((data) =>
+            showCardHome(data.slice(0, 4))
+        );
 };
 // show Product card
 const showCardHome = (products) => {
-  const productContainer = document.getElementById("card-container-home");
-  productContainer.innerHTML = "";
-  for (let product of products) {
-    const card = document.createElement("div");
-    card.innerHTML = `
+    const productContainer = document.getElementById("card-container-home");
+    productContainer.innerHTML = "";
+    for (let product of products) {
+        const card = document.createElement("div");
+        card.innerHTML = `
         <div class="card bg-base-100 shadow-xl p-4">
             <figure class="h-48 flex items-center justify-center bg-slate-100">
                 <img src="${product.image}" class="h-full object-contain"/>
@@ -34,14 +34,37 @@ const showCardHome = (products) => {
                     <button onclick='getSingleProduct(${product.id})'
                     class="rounded-lg btn text-gray-700"><i class="fa-regular fa-eye"></i>Details</button>
 
-                    <button class="rounded-lg btn bg-[#4841d6] text-white"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
+                    <button class="rounded-lg btn bg-[#4841d6] text-white cart-btn""><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
                 </div>
             </div>
         </div>
         `;
-    productContainer.append(card);
-  }
-  manageSpinner(false)
+        card.querySelector(".cart-btn").addEventListener("click", () => {
+            addToCart(product);
+        });
+        productContainer.append(card);
+    }
+    manageSpinner(false)
 };
+const addToCart = (product) => {
+    const cartCollection = JSON.parse(localStorage.getItem("cart")) || [];
+    if (cartCollection.length === 3) {
+        window.alert('you can add only 3 product')
+        return;
+    }
+    const isExisted = cartCollection.find(
+        (cart) => cart.id == product.id
+    );
+
+    if (isExisted) {
+        window.alert('this product already added')
+    }
+    else {
+        window.confirm('product added successfully')
+        cartCollection.push(product);
+        localStorage.setItem("cart", JSON.stringify(cartCollection));
+    }
+}
 // call func
 getProductsHome()
+cartCollectionLength()
